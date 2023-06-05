@@ -9,7 +9,7 @@ const jwt = require('jsonwebtoken')
 const User = require('../models/User')
 
 // import validation 
-const { registerValidation, loginValidation } = require('../models/User')
+const { registerValidation, loginValidation } = require('../config/validation')
 
 // register
 router.post('/register', async (req, res) => {

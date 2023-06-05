@@ -15,10 +15,12 @@ app.use(bodyParser.json());
 // (7) import routes
 const mahasiswaRoutes = require('./routes/mahasiswa')
 const dosenRoutes = require('./routes/dosen')
+const authRoutes = require('./routes/auth')
 
 // (8) app.use (mendaftarkan middleware baru ke Express)
 app.use('/mahasiswa', mahasiswaRoutes)
 app.use('/dosen', dosenRoutes)
+app.use('/auth', authRoutes)
 
 // (3) koneksi ke database mongodb
 mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
