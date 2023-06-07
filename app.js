@@ -4,7 +4,10 @@ const app = express()
 const mongoose = require('mongoose')
 const bodyParser = require('body-parser')
 require('dotenv/config')
+const cors = require('cors')
 
+
+app.use(cors())
 // (6) middleware body-parser
 // https://stackoverflow.com/questions/24330014/bodyparser-is-deprecated-express-4
 app.use(bodyParser.urlencoded({
